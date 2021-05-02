@@ -47,3 +47,25 @@ function agregarTareas(event) {
 
 
 
+function filtrarPorPrioridad(pPrioridad, pListaTareas) {
+    const listaFiltrada = pListaTareas.filter(tarea => tarea.prioridad.toLowerCase() === pPrioridad.toLowerCase())
+
+    return listaFiltrada
+}
+
+
+
+selectPrioridad.addEventListener('change', buscarPrioridad);
+
+function buscarPrioridad(event) {
+    let prioridad = event.target.value;
+
+    if (prioridad !== "") {
+        const listaPrioridad = filtrarPorPrioridad(prioridad, Tareas);
+
+        pintarTareas(listaPrioridad);
+    } else {
+        pintarTareas(Tareas);
+    }
+
+}

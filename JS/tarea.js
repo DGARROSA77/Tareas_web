@@ -11,7 +11,7 @@ const listTareas = new Array(
 
     },
     {
-        titulo: 'dormir',
+        titulo: 'Dormir',
         prioridad: 'Diaria',
 
     },

@@ -1,4 +1,4 @@
-const listTareas = new Array(
+const Tareas = new Array(
 
     {
         titulo: 'Desayunar',
@@ -39,8 +39,5 @@ const listTareas = new Array(
         titulo: 'Peluqueria',
         prioridad: 'Mensual',
 
-    },
-
-
-
-
+    }
+);

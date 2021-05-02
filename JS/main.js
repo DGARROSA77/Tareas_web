@@ -4,43 +4,33 @@ let inputTitulo = document.querySelector('#titulo');
 let selectPrioridad = document.querySelector('#prioridad');
 let ulTareas = document.querySelector('#tareas');
 
-botonGuardar.addEventListener('click', guardarDatos);
 
-function guardarDatos(event) {
-    event.preventDefault();
+function pintarTarea(pTareaJson) {
+    let article = document.createElement('article');
+    let p = document.createElement('p');
+    let hr = document.createElement('hr');
 
-    const tarea = new Tarea(inputTitulo.value, selectPrioridad.value)
-    listaTareas.push(tarea);
 
-    pintarTareas(listaTareas);
+
+    let contentP = document.createTextNode(`${pTareaJson.titulo}`);
+
+    p.appendChild(contentP);
+
+    article.appendChild(p);
+    article.appendChild(hr);
+
+    ulTareas.appendChild(article);
 }
 
-function pintarTareas(pLista) {
+
+function pintarTareas(pListaTareas) {
     ulTareas.innerHTML = "";
-    pLista.forEach(tarea => tarea.pintarTarea(ulTareas))
+    pListaTareas.forEach(tarea => {
+        pintarTarea(tarea);
+    });
 }
 
-borrar() {
-    this.titulo = "";
-    this.fecha = 0;
-    this.prioridad = "";
-    this.completado = true;
-    li.parentNode.removeChild(li);
-}
-
-
-pintarTarea(pSeccion) {
-    let li = document.createElement('li');
-    let textoLi = document.createTextNode(this.titulo);;
-    let button = document.createElement('button');
-    button.innerText = 'Borrar';
-
-    li.appendChild(button);
-    li.appendChild(textoLi);
-
-    li.appendChild(textoLi);
-    pSeccion.appendChild(li);
+pintarTareas(Tareas);
 
 
 
-}

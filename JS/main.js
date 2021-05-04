@@ -39,11 +39,27 @@ function agregarTareas(event) {
 
     event.preventDefault();
 
-    Tareas.push(inputTitulo.value, selectPrioridad.value);
+    let titulo = inputTitulo.value;
+    let prioridad = selectPrioridad.value;
+
+    if (titulo !== "" && prioridad !== "") {
+
+        const newTarea = {
+            titulo: titulo,
+            prioridad: prioridad,
 
 
-    agregarTareas(Tareas);
+        }
+        Tareas.push(newTarea);
+        pintarTarea(newTarea)
+
+    } else {
+        alert(' Todos los campos son obligatorios');
+    }
 }
+
+
+
 
 
 

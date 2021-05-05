@@ -45,14 +45,14 @@ form input, select{
 
 
 .Urgente {
-    background-color: chocolate;
+    background-color:orange;
 }
 
 .Diaria {
-    background-color:lightblue;
+    background-color: blue;
 }
 
 .Mensual {
-    background-color:darkkhaki;
+    background-color:greenyellow;
 }
 

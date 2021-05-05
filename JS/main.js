@@ -116,13 +116,26 @@ function buscarPrioridad(event) {
 
 }
 
-function buscarPorPalabra(pPalabra) {
+let search = document.querySelector('#titulo');
+titulo.addEventListener('input', recogerDatos);
+
+function recogerDatos(event) {
+
+    if (event.target.value !== "") {
+
+        let listaFiltrada = buscarPorPalabra(event.target.value);
+        pintarTareas(listaFiltrada);
+    } else {
+        pintarTareas(Tareas);
+    }
+}
+
+function buscarPorPalabra(pPalabra,) {
     let palabra = pPalabra.toLowerCase().trim();
     let listaFiltrada = Tareas.filter(tarea => {
-        return tarea.titulo.toLowerCase().includes(palabra) || tarea.prioridad.toLowerCase().includes(palabra)
+        return tarea.titulo.toLowerCase().includes(palabra)
     })
 
     return listaFiltrada;
 
 }
-

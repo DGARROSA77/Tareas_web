@@ -1,0 +1,36 @@
+*{
+    
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+form{
+margin: 20px;
+}
+
+form input, select{
+    display: flex;
+    height: 20px;
+}
+
+
+
+#tareas{
+    margin:10px;
+    padding:5px;
+}
+
+
+.Urgente {
+    background-color: lightskyblue;
+}
+
+.Diaria {
+    background-color:greenyellow;
+}
+
+.Mensual {
+    background-color: tomato;
+}
+

@@ -5,6 +5,15 @@
 }
 
 
+form{
+margin: 20px;
+}
+
+form input, select{
+    display: flex;
+    height: 20px;
+}
+
 
 
 #tareas{
@@ -24,3 +33,4 @@
 .Mensual {
     background-color: tomato;
 }
+

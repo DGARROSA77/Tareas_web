@@ -12,7 +12,6 @@ botonGuardar.addEventListener('click', agregarTareas);
 function pintarTarea(pTareaJson,) {
     let article = document.createElement('article');
     let p = document.createElement('p');
-    let hr = document.createElement('hr');
     let button = document.createElement('button');
 
 
@@ -36,7 +35,7 @@ function pintarTarea(pTareaJson,) {
 
     article.appendChild(button)
     article.appendChild(p);
-    article.appendChild(hr);
+
 
     ulTareas.appendChild(article);
 
@@ -114,6 +113,16 @@ function buscarPrioridad(event) {
     } else {
         pintarTareas(Tareas);
     }
+
+}
+
+function buscarPorPalabra(pPalabra) {
+    let palabra = pPalabra.toLowerCase().trim();
+    let listaFiltrada = Tareas.filter(tarea => {
+        return tarea.titulo.toLowerCase().includes(palabra) || tarea.prioridad.toLowerCase().includes(palabra)
+    })
+
+    return listaFiltrada;
 
 }
 

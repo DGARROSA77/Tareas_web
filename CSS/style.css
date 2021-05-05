@@ -6,31 +6,53 @@
 
 
 form{
-margin: 20px;
+    position: relative;
+    left: 200px;
+    margin: 20px;
 }
 
 form input, select{
-    display: flex;
+    left: 50px;
     height: 20px;
+    margin-left: 20px;
 }
 
 
 
 #tareas{
-    margin:10px;
-    padding:5px;
+    margin: 10px;
+    padding:20px;
+
 }
+
+#tareas article{
+    border: 2px solid black;
+    margin: 5px;
+    text-align: center;
+}
+
+#tareas article button{
+    display: flex;
+    background-color:red;
+    margin: 5px;
+    padding: 5px;
+    color: black;
+    border:1px solid black;
+
+}
+
+
 
 
 .Urgente {
-    background-color: lightskyblue;
+    background-color: chocolate;
 }
 
 .Diaria {
-    background-color:greenyellow;
+    background-color:lightblue;
 }
 
 .Mensual {
-    background-color: tomato;
+    background-color:darkkhaki;
 }
 

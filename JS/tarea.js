@@ -4,6 +4,7 @@ const Tareas = new Array(
         titulo: 'Desayunar',
         prioridad: 'Diaria',
 
+
     },
     {
         titulo: 'Estudiar',

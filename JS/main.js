@@ -5,6 +5,7 @@ let selectPrioridad = document.querySelector('#prioridad');
 let ulTareas = document.querySelector('#tareas');
 botonGuardar.addEventListener('click', agregarTareas);
 
+
 function pintarTarea(pTareaJson) {
     let article = document.createElement('article');
     let p = document.createElement('p');
@@ -13,8 +14,23 @@ function pintarTarea(pTareaJson) {
 
 
     let contentP = document.createTextNode(`${pTareaJson.titulo}`);
-
     p.appendChild(contentP);
+
+    switch (pTareaJson.prioridad) {
+        case 'Urgente':
+            article.classList.add('Urgente')
+            break;
+        case 'Diaria':
+            article.classList.add('Diaria')
+            break;
+        case 'Mensual':
+            article.classList.add('Mensual')
+            break;
+
+
+    }
+
+
 
     article.appendChild(p);
     article.appendChild(hr);
@@ -58,6 +74,10 @@ function agregarTareas(event) {
     }
 }
 
+function borrarTarea() {
+
+}
+
 
 
 
@@ -85,3 +105,4 @@ function buscarPrioridad(event) {
     }
 
 }
+

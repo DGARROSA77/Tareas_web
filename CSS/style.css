@@ -1,0 +1,26 @@
+*{
+    
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+
+#tareas{
+    margin:10px;
+    padding:5px;
+}
+
+
+.Urgente {
+    background-color: lightskyblue;
+}
+
+.Diaria {
+    background-color:greenyellow;
+}
+
+.Mensual {
+    background-color: tomato;
+}

@@ -5,6 +5,8 @@
 }
 
 
+
+
 form{
     position: relative;
     left: 200px;
@@ -29,17 +31,38 @@ form input, select{
     border: 2px solid black;
     margin: 5px;
     text-align: center;
+    border-radius: 6px;
 }
 
 #tareas article button{
     display: flex;
-    background-color:red;
+    background-color:tomato;
     margin: 5px;
     padding: 5px;
     color: black;
     border:1px solid black;
+    transition: 0.4s;
 
 }
+
+#tareas article button:hover{
+background-color:red;
+}
+
+#guardar{
+    background-color: teal;
+    width: 100px;
+    height: 30px;
+}
+
+#guardar:hover{
+    background-color: aquamarine;
+    transition: 1s;
+}
+
+
+
+
 
 
 
